@@ -88,7 +88,7 @@ python pwcracker.py -t zip://d://test.zip -U D://username.txt -P D://password.tx
 python pwcracker.py -t telnet://192.168.1.108:23 -U D://username.txt -P D://password.txt
 ```
 
-## 插件列表
+## 三、插件列表
 
 |序号|插件|描述|
 |:---:|:---|:---|
@@ -114,9 +114,9 @@ python pwcracker.py -t telnet://192.168.1.108:23 -U D://username.txt -P D://pass
 |20|pdf|用于爆破pdf文件的密码|
 
 
-## 三、插件编写
+## 四、插件编写
 
-#### 3.1 插件模板：
+#### 4.1 插件模板：
 
 
 ```
@@ -138,7 +138,7 @@ def doCracker(address,username,password):
 	pass
 ```
 
-#### 3.2 说明
+#### 4.2 说明
 1. plu_info（）函数用于返回插件的一些信息，当执行`python pwcracker.py --info plugin_name`,会在控制台显示插件的信息。
 
 
@@ -153,9 +153,9 @@ def doCracker(address,username,password):
 >1. plu_info()和doCheck(address,username_list,password_list)为可选实现，doCrack(address,username,password)必须实现！
 >2. 具体例子可以参数项目plus下的插件。
 
-#### 3.3 api
+#### 4.3 API
 
-框架提供的api
+框架提供的API
 
 |api|描述|
 |:--|:--|
@@ -168,7 +168,7 @@ def doCracker(address,username,password):
 |checkPort|检查端口是否开放|
 
 
-## 四、参考项目
+## 五、参考项目
 
 * [POC-T](https://github.com/Xyntax/POC-T)
 * [patator](https://github.com/lanjelot/patator)
