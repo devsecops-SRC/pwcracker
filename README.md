@@ -1,9 +1,9 @@
 # pwcracker：一款插件化密码爆破框架
 
 [![version](https://img.shields.io/badge/version-0.1-brightgreen.svg)](https://github.com/c0ny1/pwcracker) [![Python 2.7](https://img.shields.io/badge/python-2.7-yellow.svg)](https://www.python.org/) [![License](https://img.shields.io/badge/license-GPLv2-red.svg)](https://raw.githubusercontent.com/Xyntax/POC-T/master/doc/LICENSE.txt) 
-[![Plugins](https://img.shields.io/badge/Plugins-19-blue.svg)](https://github.com/Xyntax/POC-T/wiki/%E5%86%85%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%BA%93) 
+[![Plugins](https://img.shields.io/badge/Plugins-20-blue.svg)](https://github.com/Xyntax/POC-T/wiki/%E5%86%85%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%BA%93) 
 
-密码破解脚本调用框架，目前支持密文，文件和服务等类型的19种密码破解。
+密码破解脚本调用框架，目前支持密文，文件，服务和应用等类型的20种密码破解。
 
 ![](doc/pwcracker.png)
 
@@ -88,7 +88,30 @@ python pwcracker.py -t zip://d://test.zip -U D://username.txt -P D://password.tx
 python pwcracker.py -t telnet://192.168.1.108:23 -U D://username.txt -P D://password.txt
 ```
 
+## 插件列表
 
+|序号|插件|描述|
+|:---:|:---|:---|
+|1|md2|用于爆破md2算法的密文|
+|2|md4|用于爆破md4算法的密文|
+|3|md5|用于爆破md5算法的密文|
+|4|sha1|用于爆破sha1算法的密文|
+|5|sha224|用于爆破sha224算法的密文|
+|6|sha256|用于爆破sha256算法的密文|
+|7|sha384|用于爆破sha384算法的密文|
+|8|sha512|用于爆破sha512算法的密文|
+|9|ftp|用于爆破ftp服务的账户密码|
+|10|ssh|用于爆破ssh服务的账户密码|
+|11|telnet|用于爆破telnet服务的账户密码|
+|12|mysql|用于爆破mysql数据库的账户密码|
+|13|oracle|用于爆破oracle数据库的账户密码|
+|14|oracle_sid|用于爆破oracle数据库的sid|
+|15|mssql|用于爆破mssql数据库的账户密码|
+|16|vnc|用于爆破vnc服务的账户密码|
+|17|7z|用于爆破7z文件的密码|
+|18|rar|用于爆破rar文件的密码|
+|19|zip|用于爆破zip文件的密码|
+|20|pdf|用于爆破pdf文件的密码|
 
 
 ## 三、插件编写
