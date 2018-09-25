@@ -1,6 +1,7 @@
 #coding=utf-8
+import os
 from unrar import rarfile
-from lib.helper import getPath
+from lib.helper import getPath,del_dir
 
 def plu_info():
 	dict_plugin={};
@@ -13,10 +14,11 @@ def plu_info():
 
 def doCrack(address,username,password):
 	try:
+		tmp_path = os.getcwd() + '\\tmp\\crackRAR'
 		filename = getPath(address)
-		print filename
-		#rfile = rarfile.RarFile(filename)
-		#rfile.extractall(path=getTmpPath(), pwd=password)
+		rfile = rarfile.RarFile(filename)
+		rfile.extractall(path=tmp_path, pwd=password)
+		del_dir(tmp_path)
 		return True,None
 	except:
 		return False,u'解压失败'
